@@ -14,5 +14,13 @@ second = abs(int(input())) % 5
 third = abs(int(input())) % 7
 
 age = (first * 70 + second * 21 + third * 15) % 105
-
 print("Your age is " + str(age) + "; that's a good time to start programming!")
+
+print("Now I will prove to you that I can count to any number you want.")
+positive_number = int(input())
+count = 0
+
+while positive_number >= count:
+    print(str(count) + "!")
+    count += 1
+print("Completed, have a nice day!")
