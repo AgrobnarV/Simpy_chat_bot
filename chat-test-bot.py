@@ -1,6 +1,6 @@
 def greet(bot_name, birth_year):
-    print('Hello! My name is Test-bot.')
-    print('I was created in 2021.')
+    print(f"Hello! My name is {bot_name}.")
+    print(f"I was created in {birth_year}.")
 
 
 def remind_name():
@@ -10,8 +10,8 @@ def remind_name():
 
 
 def guess_name():
-    print('Let me guess your age.')
-    print('Enter remainders of dividing your age by 3, 5 and 7.')
+    print("Let me guess your age.")
+    print("Enter the remainders of dividing your age by 3, 5, and 7:")
 
     num3 = abs(int(input())) % 3
     num5 = abs(int(input())) % 5
@@ -23,12 +23,11 @@ def guess_name():
 
 def count():
     print("Now I will prove to you that I can count to any number you want.")
-
+    print("Enter a positive number:")
     positive_number = int(input())
-    i = 0
-    while positive_number >= i:
-        print(str(i) + "!")
-        i += 1
+    
+    for i in range(positive_number + 1):
+        print(f"{i}!")
 
 
 def program_methods():
@@ -40,12 +39,13 @@ def program_methods():
             4. To interrupt the execution of a program.""")
 
     meth_num = int(input())
-    while meth_num > 4 or meth_num < 1:
-        print("You must enter 1 to 4")
-        meth_num = int(input())
-    while meth_num != 3:
-        print("Please, try again.")
-        meth_num = int(input())
+    if 1 <= meth_num <= 4:
+        if meth_num == 3:
+            print("Correct! We use methods to determine the execution time of a program.")
+        else:
+            print("Incorrect. Please review and try again.")
+    else:
+        print("You must enter a number between 1 and 4.")
 
 
 def bye():
